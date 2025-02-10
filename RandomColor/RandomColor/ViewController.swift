@@ -33,11 +33,18 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureViews()
+        configureConstraints()
+    }
+
+    private func configureViews() {
         view.addSubview(colorLabel)
         buttonsStackView.addArrangedSubview(changeColorButton)
         buttonsStackView.addArrangedSubview(resetButton)
         view.addSubview(buttonsStackView)
+    }
 
+    private func configureConstraints() {
         NSLayoutConstraint.activate([
             colorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             colorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
