@@ -12,6 +12,7 @@ final class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Change Color", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(changeBackgroundColor), for: .touchUpInside)
         return button
     }()
 
@@ -55,5 +56,14 @@ final class ViewController: UIViewController {
             buttonsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             buttonsStackView.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    @objc private func changeBackgroundColor() {
+        let red = CGFloat.random(in: 0...1)
+        let green = CGFloat.random(in: 0...1)
+        let blue = CGFloat.random(in: 0...1)
+        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
+        view.backgroundColor = color
     }
 }
