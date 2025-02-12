@@ -44,12 +44,12 @@ final class ViewController: UIViewController {
         let green = CGFloat.random(in: 0...1)
         let blue = CGFloat.random(in: 0...1)
         
-        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
         colorLabel.text = "R: \(Int(red * 255)), G: \(Int(green * 255)), B: \(Int(blue * 255))"
     }
     
     @objc private func resetBackgroundColor() {
-        view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         colorLabel.text = "R: 255, G: 255, B: 255"
     }
 }
