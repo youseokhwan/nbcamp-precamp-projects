@@ -57,9 +57,9 @@ final class ViewController: UIViewController {
 private extension ViewController {
     func configureViews() {
         view.addSubview(colorLabel)
+        view.addSubview(buttonsStackView)
         buttonsStackView.addArrangedSubview(changeColorButton)
         buttonsStackView.addArrangedSubview(resetButton)
-        view.addSubview(buttonsStackView)
     }
 
     func configureConstraints() {
