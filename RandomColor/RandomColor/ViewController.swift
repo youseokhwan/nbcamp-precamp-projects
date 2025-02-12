@@ -12,7 +12,7 @@ final class ViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Change Color", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(changeBackgroundColor), for: .touchUpInside)
+        button.addTarget(self, action: #selector(changeRandomBackgroundColor), for: .touchUpInside)
         return button
     }()
 
@@ -38,7 +38,7 @@ final class ViewController: UIViewController {
         configureConstraints()
     }
 
-    @objc private func changeBackgroundColor() {
+    @objc private func changeRandomBackgroundColor() {
         view.backgroundColor = UIColor(
             red: .random(in: 0...1),
             green: .random(in: 0...1),
