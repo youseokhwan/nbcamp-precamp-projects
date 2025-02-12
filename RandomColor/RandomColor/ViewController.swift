@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
     private lazy var changeColorButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Change Color", for: .normal)
-        button.addTarget(self, action: #selector(changeRandomBackgroundColor), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedChangeColorButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
     private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Reset", for: .normal)
-        button.addTarget(self, action: #selector(resetBackgroundColor), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedResetButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -40,13 +40,13 @@ final class ViewController: UIViewController {
         configureConstraints()
     }
 
-    @objc private func changeRandomBackgroundColor() {
+    @objc private func tappedChangeColorButton() {
         color.updateRandomRGB()
         view.backgroundColor = UIColor(color)
         colorLabel.text = color.rgbText
     }
 
-    @objc private func resetBackgroundColor() {
+    @objc private func tappedResetButton() {
         color.resetRGB()
         view.backgroundColor = UIColor(color)
         colorLabel.text = color.rgbText
