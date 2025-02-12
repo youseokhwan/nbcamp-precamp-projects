@@ -10,17 +10,17 @@
 
 ## ✅ 요구사항
 
-### 1. UI 구성
+1. UI 구성
 
-* UIView: 화면 전체를 덮는 영역
-* UILabel: 중앙에 RGB 값을 표시
-* UIButton: 화면 하단에 두 개의 버튼 배치
-    * "Change Color" 버튼: 랜덤 색상 변경
-    * "Reset" 버튼: 초기화
+    * UIView: 화면 전체를 덮는 영역
+    * UILabel: 중앙에 RGB 값을 표시
+    * UIButton: 화면 하단에 두 개의 버튼 배치
+        * "Change Color" 버튼: 랜덤 색상 변경
+        * "Reset" 버튼: 초기화
 
-### 2. Auto Layout
+2. Auto Layout
 
-모든 컴포넌트가 Auto Layout을 통해 화면에 적절히 배치되어야 함
+    * 모든 컴포넌트가 Auto Layout을 통해 화면에 적절히 배치되어야 함
 
 ## 🛠️ 기술 스택
 
@@ -28,7 +28,7 @@ UIKit, Auto Layout
 
 ## 🚀 실행 방법
 
-프로젝트 클론 및 실행
+1. 프로젝트 클론
 
 ```bash
 git clone https://github.com/youseokhwan/nbcamp-precamp-projects
@@ -36,7 +36,7 @@ cd nbcamp-precamp-projects/RandomColor
 open RandomColor.xcodeproj
 ```
 
-이후, 시뮬레이터 혹은 실제 디바이스에서 실행(⌘ + R)
+2. 시뮬레이터 혹은 실제 디바이스에서 앱 실행(⌘ + R)
 
 ## 🔥 구현 결과
 
