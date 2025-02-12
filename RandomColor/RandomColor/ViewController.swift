@@ -43,13 +43,13 @@ final class ViewController: UIViewController {
 
     @objc private func changeRandomBackgroundColor() {
         color.updateRandomRGB()
-        view.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: 1)
+        view.backgroundColor = UIColor(color)
         colorLabel.text = color.rgbText
     }
     
     @objc private func resetBackgroundColor() {
         color.resetRGB()
-        view.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: 1)
+        view.backgroundColor = UIColor(color)
         colorLabel.text = color.rgbText
     }
 }

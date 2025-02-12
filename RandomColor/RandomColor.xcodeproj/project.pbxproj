@@ -14,6 +14,7 @@
 		444896D92D59E9280045822A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 444896D82D59E9280045822A /* Assets.xcassets */; };
 		444896DC2D59E9280045822A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 444896DA2D59E9280045822A /* LaunchScreen.storyboard */; };
 		4497601B2D5C8F4A0057D9CF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4497601A2D5C8F480057D9CF /* Color.swift */; };
+		4497601D2D5C95130057D9CF /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4497601C2D5C95130057D9CF /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		444896DB2D59E9280045822A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		444896DD2D59E9280045822A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4497601A2D5C8F480057D9CF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4497601C2D5C95130057D9CF /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				444896D12D59E9260045822A /* SceneDelegate.swift */,
 				444896D32D59E9260045822A /* ViewController.swift */,
 				4497601A2D5C8F480057D9CF /* Color.swift */,
+				4497601C2D5C95130057D9CF /* UIColor+Extensions.swift */,
 				444896D52D59E9260045822A /* Main.storyboard */,
 				444896D82D59E9280045822A /* Assets.xcassets */,
 				444896DA2D59E9280045822A /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				444896D42D59E9260045822A /* ViewController.swift in Sources */,
+				4497601D2D5C95130057D9CF /* UIColor+Extensions.swift in Sources */,
 				4497601B2D5C8F4A0057D9CF /* Color.swift in Sources */,
 				444896D02D59E9260045822A /* AppDelegate.swift in Sources */,
 				444896D22D59E9260045822A /* SceneDelegate.swift in Sources */,
