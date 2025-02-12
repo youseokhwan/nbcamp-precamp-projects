@@ -33,24 +33,32 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
-        configureConstraints()
+        configures()
     }
 
     @objc private func tappedChangeColorButton() {
         color.updateRandomRGB()
-        view.backgroundColor = UIColor(color)
-        colorLabel.text = color.rgbText
     }
 
     @objc private func tappedResetButton() {
         color.resetRGB()
-        view.backgroundColor = UIColor(color)
-        colorLabel.text = color.rgbText
+    }
+
+    @objc private func didUpdatedRGB() {
+        DispatchQueue.main.async {
+            self.view.backgroundColor = UIColor(self.color)
+            self.colorLabel.text = self.color.rgbText
+        }
     }
 }
 
 private extension ViewController {
+    func configures() {
+        configureViews()
+        configureConstraints()
+        configureNotifications()
+    }
+
     func configureViews() {
         view.addSubview(colorLabel)
         view.addSubview(buttonsStackView)
@@ -69,5 +77,12 @@ private extension ViewController {
             buttonsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             buttonsStackView.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+
+    func configureNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didUpdatedRGB),
+                                               name: .didUpdatedRGB,
+                                               object: nil)
     }
 }

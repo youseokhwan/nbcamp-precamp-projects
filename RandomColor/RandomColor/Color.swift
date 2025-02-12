@@ -13,11 +13,17 @@ struct Color {
         red = CGFloat.random(in: 0...1)
         green = CGFloat.random(in: 0...1)
         blue = CGFloat.random(in: 0...1)
+        NotificationCenter.default.post(name: .didUpdatedRGB, object: nil)
     }
 
     mutating func resetRGB() {
         red = CGFloat(1.0)
         green = CGFloat(1.0)
         blue = CGFloat(1.0)
+        NotificationCenter.default.post(name: .didUpdatedRGB, object: nil)
     }
+}
+
+extension Notification.Name {
+    static let didUpdatedRGB = Notification.Name("didUpdatedRGB")
 }
