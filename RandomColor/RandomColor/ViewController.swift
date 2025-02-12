@@ -1,9 +1,11 @@
 import UIKit
 
 final class ViewController: UIViewController {
+    private var color = Color()
+    
     private lazy var colorLabel: UILabel = {
         let label = UILabel()
-        label.text = "R: 255, G: 255, B: 255"
+        label.text = color.rgbText
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,17 +42,15 @@ final class ViewController: UIViewController {
     }
 
     @objc private func changeRandomBackgroundColor() {
-        let red = CGFloat.random(in: 0...1)
-        let green = CGFloat.random(in: 0...1)
-        let blue = CGFloat.random(in: 0...1)
-        
-        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
-        colorLabel.text = "R: \(Int(red * 255)), G: \(Int(green * 255)), B: \(Int(blue * 255))"
+        color.updateRandomRGB()
+        view.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: 1)
+        colorLabel.text = color.rgbText
     }
     
     @objc private func resetBackgroundColor() {
-        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        colorLabel.text = "R: 255, G: 255, B: 255"
+        color.resetRGB()
+        view.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: 1)
+        colorLabel.text = color.rgbText
     }
 }
 
