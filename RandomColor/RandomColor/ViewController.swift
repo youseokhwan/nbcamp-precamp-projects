@@ -39,12 +39,12 @@ final class ViewController: UIViewController {
     }
 
     @objc private func changeBackgroundColor() {
-        let red = CGFloat.random(in: 0...1)
-        let green = CGFloat.random(in: 0...1)
-        let blue = CGFloat.random(in: 0...1)
-        let color = UIColor(red: red, green: green, blue: blue, alpha: 1)
-        
-        view.backgroundColor = color
+        view.backgroundColor = UIColor(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1),
+            alpha: 1
+        )
     }
 }
 
