@@ -22,11 +22,25 @@
 
 모든 컴포넌트가 Auto Layout을 통해 화면에 적절히 배치되어야 함
 
+## 🛠️ 기술 스택
+
+UIKit, Auto Layout
+
+## 🚀 실행 방법
+
+프로젝트 클론 및 실행
+
+```bash
+git clone https://github.com/youseokhwan/nbcamp-precamp-projects
+cd nbcamp-precamp-projects/RandomColor
+open RandomColor.xcodeproj
+```
+
+이후, 시뮬레이터 혹은 실제 디바이스에서 실행(⌘ + R)
+
 ## 🔥 구현 결과
 
 |기능|결과|
 |:---:|:---:|
 |랜덤 색상 변경|![result01](assets/result01.gif)|
 |초기화|![result02](assets/result02.gif)|
-
-
