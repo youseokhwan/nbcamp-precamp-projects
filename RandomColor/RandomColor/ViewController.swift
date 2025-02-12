@@ -2,7 +2,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     private var color = Color()
-    
+
     private lazy var colorLabel: UILabel = {
         let label = UILabel()
         label.text = color.rgbText
@@ -36,7 +36,6 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureViews()
         configureConstraints()
     }
@@ -46,7 +45,7 @@ final class ViewController: UIViewController {
         view.backgroundColor = UIColor(color)
         colorLabel.text = color.rgbText
     }
-    
+
     @objc private func resetBackgroundColor() {
         color.resetRGB()
         view.backgroundColor = UIColor(color)
