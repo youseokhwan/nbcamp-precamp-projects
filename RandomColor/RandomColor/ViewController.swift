@@ -55,14 +55,14 @@ final class ViewController: UIViewController {
 }
 
 private extension ViewController {
-    private func configureViews() {
+    func configureViews() {
         view.addSubview(colorLabel)
         buttonsStackView.addArrangedSubview(changeColorButton)
         buttonsStackView.addArrangedSubview(resetButton)
         view.addSubview(buttonsStackView)
     }
 
-    private func configureConstraints() {
+    func configureConstraints() {
         NSLayoutConstraint.activate([
             colorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             colorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
