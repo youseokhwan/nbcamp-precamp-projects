@@ -5,7 +5,7 @@ final class ColorView: UIView {
 
     private lazy var colorLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
+        label.text = "R: 255, G: 255, B: 255"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -47,6 +47,10 @@ final class ColorView: UIView {
 
     @objc private func didTapResetButton() {
         delegate?.didTapResetButton()
+    }
+
+    func updateColorLabelText(_ text: String) {
+        colorLabel.text = text
     }
 }
 

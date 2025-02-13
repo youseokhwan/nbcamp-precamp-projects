@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
     @objc private func didUpdatedRGB() {
         DispatchQueue.main.async {
             self.view.backgroundColor = UIColor(self.color)
-//            self.colorLabel.text = self.color.rgbText
+            self.colorView.updateColorLabelText(self.color.rgbText)
         }
     }
 }
