@@ -24,7 +24,7 @@
 
 ## 🛠️ 기술 스택
 
-UIKit, Auto Layout
+UIKit, MVC, Auto Layout
 
 ## 🚀 실행 방법
 
