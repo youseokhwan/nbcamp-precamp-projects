@@ -64,16 +64,48 @@
 			children = (
 				444896CF2D59E9260045822A /* AppDelegate.swift */,
 				444896D12D59E9260045822A /* SceneDelegate.swift */,
-				444896D32D59E9260045822A /* ViewController.swift */,
-				4497601A2D5C8F480057D9CF /* Color.swift */,
-				4465C7302D5DB53F00717724 /* ColorView.swift */,
-				4497601C2D5C95130057D9CF /* UIColor+Extensions.swift */,
+				4465C7372D5DB5F900717724 /* Models */,
+				4465C7382D5DB5FD00717724 /* Views */,
+				4465C7392D5DB60000717724 /* Controllers */,
+				4465C73A2D5DB60400717724 /* Extensions */,
 				444896D52D59E9260045822A /* Main.storyboard */,
-				444896D82D59E9280045822A /* Assets.xcassets */,
 				444896DA2D59E9280045822A /* LaunchScreen.storyboard */,
+				444896D82D59E9280045822A /* Assets.xcassets */,
 				444896DD2D59E9280045822A /* Info.plist */,
 			);
 			path = RandomColor;
+			sourceTree = "<group>";
+		};
+		4465C7372D5DB5F900717724 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4497601A2D5C8F480057D9CF /* Color.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4465C7382D5DB5FD00717724 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4465C7302D5DB53F00717724 /* ColorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4465C7392D5DB60000717724 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				444896D32D59E9260045822A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4465C73A2D5DB60400717724 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4497601C2D5C95130057D9CF /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
