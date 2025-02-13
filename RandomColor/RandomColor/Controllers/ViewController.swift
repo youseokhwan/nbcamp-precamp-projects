@@ -14,14 +14,6 @@ final class ViewController: UIViewController {
         configures()
     }
 
-    @objc private func tappedChangeColorButton() {
-        color.updateRandomRGB()
-    }
-
-    @objc private func tappedResetButton() {
-        color.resetRGB()
-    }
-
     @objc private func didUpdatedRGB() {
         DispatchQueue.main.async {
             self.view.backgroundColor = UIColor(self.color)
@@ -39,6 +31,7 @@ private extension ViewController {
 
     func configureViews() {
         view.addSubview(colorView)
+        colorView.delegate = self
     }
 
     func configureConstraints() {
@@ -55,5 +48,15 @@ private extension ViewController {
                                                selector: #selector(didUpdatedRGB),
                                                name: .didUpdatedRGB,
                                                object: nil)
+    }
+}
+
+extension ViewController: ColorViewDelegate {
+    func didTapChangeColorButton() {
+        color.updateRandomRGB()
+    }
+
+    func didTapResetButton() {
+        color.resetRGB()
     }
 }

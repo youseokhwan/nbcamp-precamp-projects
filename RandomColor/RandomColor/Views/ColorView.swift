@@ -1,6 +1,8 @@
 import UIKit
 
 final class ColorView: UIView {
+    weak var delegate: ColorViewDelegate?
+
     private lazy var colorLabel: UILabel = {
         let label = UILabel()
         label.text = ""
@@ -10,14 +12,14 @@ final class ColorView: UIView {
     private lazy var changeColorButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Change Color", for: .normal)
-//        button.addTarget(self, action: #selector(tappedChangeColorButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapChangeColorButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Reset", for: .normal)
-//        button.addTarget(self, action: #selector(tappedResetButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapResetButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -37,6 +39,14 @@ final class ColorView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configures()
+    }
+
+    @objc private func didTapChangeColorButton() {
+        delegate?.didTapChangeColorButton()
+    }
+
+    @objc private func didTapResetButton() {
+        delegate?.didTapResetButton()
     }
 }
 
