@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
         configures()
     }
 
-    @objc private func didUpdatedRGB() {
+    @objc private func didUpdateRGB() {
         DispatchQueue.main.async {
             self.view.backgroundColor = UIColor(self.color)
             self.colorView.updateColorLabelText(self.color.rgbText)
@@ -45,8 +45,8 @@ private extension ViewController {
 
     func configureNotifications() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didUpdatedRGB),
-                                               name: .didUpdatedRGB,
+                                               selector: #selector(didUpdateRGB),
+                                               name: .didUpdateRGB,
                                                object: nil)
     }
 }
