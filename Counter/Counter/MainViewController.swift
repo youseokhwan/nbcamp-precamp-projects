@@ -1,10 +1,10 @@
 import UIKit
+import Combine
 import SnapKit
 
 final class MainViewController: UIViewController {
     private lazy var countLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(viewModel.count)"
         label.font = .systemFont(ofSize: 32)
         return label
     }()
@@ -37,6 +37,7 @@ final class MainViewController: UIViewController {
     }()
 
     private var viewModel = MainViewModel()
+    private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,7 @@ private extension MainViewController {
     func configure() {
         configureViews()
         configureConstraints()
+        configureBind()
     }
 
     func configureViews() {
@@ -79,5 +81,14 @@ private extension MainViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(50)
             make.height.equalTo(50)
         }
+    }
+
+    func configureBind() {
+        viewModel.$count
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] count in
+                self?.countLabel.text = "\(count)"
+            }
+            .store(in: &cancellables)
     }
 }

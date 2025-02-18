@@ -1,17 +1,18 @@
 import Foundation
+import Combine
 
-struct MainViewModel {
-    private(set) var count = 0
+final class MainViewModel: ObservableObject {
+    @Published private(set) var count = 0
 
-    mutating func increaseCount() {
+    func increaseCount() {
         count += 1
     }
 
-    mutating func decreaseCount() {
+    func decreaseCount() {
         count -= 1
     }
 
-    mutating func resetCount() {
+    func resetCount() {
         count = 0
     }
 }
