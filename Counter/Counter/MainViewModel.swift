@@ -10,4 +10,8 @@ struct MainViewModel {
     mutating func decreaseCount() {
         count -= 1
     }
+
+    mutating func resetCount() {
+        count = 0
+    }
 }
