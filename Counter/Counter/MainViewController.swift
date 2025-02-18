@@ -16,14 +16,14 @@ final class MainViewController: UIViewController {
     }()
     private lazy var plusButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("+", for: .normal)
+        button.setTitle("Plus", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
         button.addTarget(self, action: #selector(didTapPlusButton), for: .touchUpInside)
         return button
     }()
     private lazy var minusButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("-", for: .normal)
+        button.setTitle("Minus", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
         button.addTarget(self, action: #selector(didTapMinusButton), for: .touchUpInside)
         return button
@@ -82,7 +82,7 @@ private extension MainViewController {
             make.center.equalToSuperview()
         }
         buttonsStackView.snp.makeConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(100)
+            make.horizontalEdges.equalToSuperview().inset(50)
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(50)
             make.height.equalTo(50)
         }
