@@ -15,6 +15,7 @@
 		4465C7752D631E4800717724 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4465C76B2D631E4800717724 /* Main.storyboard */; };
 		4465C79E2D64785A00717724 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4465C79D2D64785A00717724 /* SnapKit */; };
 		4465C7A22D64834000717724 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465C7A12D64834000717724 /* MainViewModel.swift */; };
+		4465C7B02D64CF5800717724 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465C7A12D64834000717724 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +162,6 @@
 					};
 					4465C7A62D64CE1700717724 = {
 						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4465C74C2D631C8700717724;
 					};
 				};
 			};
@@ -224,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4465C7B02D64CF5800717724 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +446,6 @@
 		4465C7AE2D64CE1700717724 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 37CRZBHS68;
@@ -460,7 +460,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -468,7 +467,6 @@
 		4465C7AF2D64CE1700717724 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 37CRZBHS68;
@@ -483,7 +481,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
