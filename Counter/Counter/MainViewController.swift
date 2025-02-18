@@ -55,6 +55,11 @@ final class MainViewController: UIViewController {
     @objc private func didTapResetButton() {
         viewModel.resetCount()
     }
+
+    private func updateButtonStates(for count: Int) {
+        plusButton.isEnabled = count < 10
+        minusButton.isEnabled = count > -10
+    }
 }
 
 private extension MainViewController {
@@ -88,6 +93,7 @@ private extension MainViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] count in
                 self?.countLabel.text = "\(count)"
+                self?.updateButtonStates(for: count)
             }
             .store(in: &cancellables)
     }
