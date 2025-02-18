@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-final class ViewController: UIViewController {
+final class MainViewController: UIViewController {
     private lazy var countLabel: UILabel = {
         let label = UILabel()
         label.text = "\(0)"
@@ -39,7 +39,7 @@ final class ViewController: UIViewController {
     }
 }
 
-private extension ViewController {
+private extension MainViewController {
     func configure() {
         configureViews()
         configureConstraints()
