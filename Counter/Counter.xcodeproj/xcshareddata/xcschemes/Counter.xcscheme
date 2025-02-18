@@ -41,6 +41,17 @@
                ReferencedContainer = "container:Counter.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4465C7B42D64D49600717724"
+               BuildableName = "CounterSwiftTests.xctest"
+               BlueprintName = "CounterSwiftTests"
+               ReferencedContainer = "container:Counter.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

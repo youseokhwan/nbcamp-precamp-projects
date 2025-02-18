@@ -26,6 +26,13 @@
 			remoteGlobalIDString = 4465C74C2D631C8700717724;
 			remoteInfo = Counter;
 		};
+		4465C7B92D64D49600717724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4465C7452D631C8700717724 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4465C74C2D631C8700717724;
+			remoteInfo = Counter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +46,18 @@
 		4465C76D2D631E4800717724 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4465C7A12D64834000717724 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4465C7A72D64CE1700717724 /* CounterXCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterXCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4465C7B52D64D49600717724 /* CounterSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4465C7A82D64CE1700717724 /* CounterXCTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CounterXCTests;
+			sourceTree = "<group>";
+		};
+		4465C7B62D64D49600717724 /* CounterSwiftTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CounterSwiftTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -65,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4465C7B22D64D49600717724 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +93,7 @@
 			children = (
 				4465C76E2D631E4800717724 /* Counter */,
 				4465C7A82D64CE1700717724 /* CounterXCTests */,
+				4465C7B62D64D49600717724 /* CounterSwiftTests */,
 				4465C74E2D631C8700717724 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +103,7 @@
 			children = (
 				4465C74D2D631C8700717724 /* Counter.app */,
 				4465C7A72D64CE1700717724 /* CounterXCTests.xctest */,
+				4465C7B52D64D49600717724 /* CounterSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +169,29 @@
 			productReference = 4465C7A72D64CE1700717724 /* CounterXCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4465C7B42D64D49600717724 /* CounterSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4465C7BB2D64D49600717724 /* Build configuration list for PBXNativeTarget "CounterSwiftTests" */;
+			buildPhases = (
+				4465C7B12D64D49600717724 /* Sources */,
+				4465C7B22D64D49600717724 /* Frameworks */,
+				4465C7B32D64D49600717724 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4465C7BA2D64D49600717724 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4465C7B62D64D49600717724 /* CounterSwiftTests */,
+			);
+			name = CounterSwiftTests;
+			packageProductDependencies = (
+			);
+			productName = CounterSwiftTests;
+			productReference = 4465C7B52D64D49600717724 /* CounterSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +207,10 @@
 					};
 					4465C7A62D64CE1700717724 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					4465C7B42D64D49600717724 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4465C74C2D631C8700717724;
 					};
 				};
 			};
@@ -184,6 +233,7 @@
 			targets = (
 				4465C74C2D631C8700717724 /* Counter */,
 				4465C7A62D64CE1700717724 /* CounterXCTests */,
+				4465C7B42D64D49600717724 /* CounterSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +250,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4465C7A52D64CE1700717724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4465C7B32D64D49600717724 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +285,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4465C7B12D64D49600717724 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -235,6 +299,11 @@
 			isa = PBXTargetDependency;
 			target = 4465C74C2D631C8700717724 /* Counter */;
 			targetProxy = 4465C7AB2D64CE1700717724 /* PBXContainerItemProxy */;
+		};
+		4465C7BA2D64D49600717724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4465C74C2D631C8700717724 /* Counter */;
+			targetProxy = 4465C7B92D64D49600717724 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -485,6 +554,52 @@
 			};
 			name = Release;
 		};
+		4465C7BC2D64D49600717724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37CRZBHS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = youseokhwan.CounterSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		4465C7BD2D64D49600717724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37CRZBHS68;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = youseokhwan.CounterSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+				XROS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +626,15 @@
 			buildConfigurations = (
 				4465C7AE2D64CE1700717724 /* Debug */,
 				4465C7AF2D64CE1700717724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4465C7BB2D64D49600717724 /* Build configuration list for PBXNativeTarget "CounterSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4465C7BC2D64D49600717724 /* Debug */,
+				4465C7BD2D64D49600717724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
