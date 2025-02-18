@@ -14,6 +14,7 @@
 		4465C7742D631E4800717724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4465C7692D631E4800717724 /* LaunchScreen.storyboard */; };
 		4465C7752D631E4800717724 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4465C76B2D631E4800717724 /* Main.storyboard */; };
 		4465C79E2D64785A00717724 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4465C79D2D64785A00717724 /* SnapKit */; };
+		4465C7A22D64834000717724 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465C7A12D64834000717724 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4465C76A2D631E4800717724 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4465C76C2D631E4800717724 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4465C76D2D631E4800717724 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4465C7A12D64834000717724 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4465C76B2D631E4800717724 /* Main.storyboard */,
 				4465C7692D631E4800717724 /* LaunchScreen.storyboard */,
 				4465C76D2D631E4800717724 /* MainViewController.swift */,
+				4465C7A12D64834000717724 /* MainViewModel.swift */,
 				4465C7662D631E4800717724 /* Assets.xcassets */,
 				4465C7672D631E4800717724 /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 				4465C76F2D631E4800717724 /* AppDelegate.swift in Sources */,
 				4465C7702D631E4800717724 /* SceneDelegate.swift in Sources */,
 				4465C7712D631E4800717724 /* MainViewController.swift in Sources */,
+				4465C7A22D64834000717724 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

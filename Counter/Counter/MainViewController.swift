@@ -4,7 +4,7 @@ import SnapKit
 final class MainViewController: UIViewController {
     private lazy var countLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(0)"
+        label.text = "\(viewModel.count)"
         label.font = .systemFont(ofSize: 32)
         return label
     }()
@@ -32,6 +32,8 @@ final class MainViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 24)
         return button
     }()
+
+    private var viewModel = MainViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
