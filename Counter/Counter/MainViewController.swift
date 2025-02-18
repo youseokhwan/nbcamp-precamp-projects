@@ -18,18 +18,21 @@ final class MainViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("+", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
+        button.addTarget(self, action: #selector(didTapPlusButton), for: .touchUpInside)
         return button
     }()
     private lazy var minusButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("-", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
+        button.addTarget(self, action: #selector(didTapMinusButton), for: .touchUpInside)
         return button
     }()
     private lazy var resetButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Reset", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24)
+        button.addTarget(self, action: #selector(didTapResetButton), for: .touchUpInside)
         return button
     }()
 
@@ -38,6 +41,18 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+    }
+
+    @objc private func didTapPlusButton() {
+        viewModel.increaseCount()
+    }
+
+    @objc private func didTapMinusButton() {
+        viewModel.decreaseCount()
+    }
+
+    @objc private func didTapResetButton() {
+        viewModel.resetCount()
     }
 }
 
