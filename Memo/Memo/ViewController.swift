@@ -6,11 +6,40 @@ final class ViewController: UIViewController {
         let tableView = UITableView()
         return tableView
     }()
-    private var memos = ["1", "2", "3"]
+    private var memos = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        loadMemos()
+    }
+
+    @objc private func didTapAddMemoButton() {
+        let alert = UIAlertController(title: "새 메모", message: nil, preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "메모를 입력하세요"
+        }
+
+        let addAction = UIAlertAction(title: "추가", style: .default) { _ in
+            if let text = alert.textFields?.first?.text, !text.isEmpty {
+                self.memos.append(text)
+                self.tableView.reloadData()
+                self.saveMemos()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .destructive)
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true)
+    }
+
+    private func loadMemos() {
+        memos = UserDefaults.standard.stringArray(forKey: "memos") ?? []
+    }
+
+    private func saveMemos() {
+        UserDefaults.standard.set(memos, forKey: "memos")
     }
 }
 
@@ -45,25 +74,6 @@ private extension ViewController {
             make.edges.equalToSuperview()
         }
     }
-
-    @objc func didTapAddMemoButton() {
-        let alert = UIAlertController(title: "새 메모", message: nil, preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.placeholder = "메모를 입력하세요"
-        }
-
-        let addAction = UIAlertAction(title: "추가", style: .default) { _ in
-            if let text = alert.textFields?.first?.text, !text.isEmpty {
-                self.memos.append(text)
-                self.tableView.reloadData()
-            }
-        }
-        let cancelAction = UIAlertAction(title: "취소", style: .destructive)
-        alert.addAction(addAction)
-        alert.addAction(cancelAction)
-
-        present(alert, animated: true)
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -85,6 +95,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             memos.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            saveMemos()
         }
     }
 }
