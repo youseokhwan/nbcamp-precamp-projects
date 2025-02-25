@@ -10,16 +10,30 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureLayout()
-        configureConstraints()
+        configure()
     }
 }
 
 private extension ViewController {
-    func configureLayout() {
-        view.backgroundColor = .systemBackground
-        title = "ViewController"
+    func configure() {
+        configureNavigationController()
+        configureLayout()
+        configureConstraints()
+    }
 
+    func configureNavigationController() {
+        view.backgroundColor = .systemBackground
+        title = "메모"
+
+        let addMemoButton = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(didTapAddMemoButton)
+        )
+        navigationItem.rightBarButtonItem = addMemoButton
+    }
+
+    func configureLayout() {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,6 +44,10 @@ private extension ViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+
+    @objc func didTapAddMemoButton() {
+        print(#function)
     }
 }
 
